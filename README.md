@@ -99,6 +99,8 @@ I used the following resources to help guide me to complete the portfolio projec
 - [W3Schools](https://www.w3schools.com/)
 - [JavaScript Tutorial](https://www.w3schools.com/js/)
 - [Web APIs - Introduction](https://www.w3schools.com/js/js_api_intro.asp)
+- [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
+- [momentjs](https://momentjs.com/)
 - [How to take a full page screenshot with a hidden Chrome shortcut](https://zapier.com/blog/full-page-screenshots-in-chrome/)
 
 ## License
