@@ -40,22 +40,3 @@
     color: white;
     text-align: center;
 }
-
-/* UV Coloring Scheme for UV Display */
-.uv-favorable {
-    background-color: green;
-    border-radius: 5px;
-    color: white;
-}
-
-.uv-moderate {
-    background-color: orange;
-    border-radius: 5px;
-    color: white;
-}
-
-.uv-severe {
-    background-color: red;
-    border-radius: 5px;
-    color: white;
-}
