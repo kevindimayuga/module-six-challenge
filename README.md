@@ -1,4 +1,4 @@
-# Module 6 Challenge - Weather Dashboard
+# Weather Dashboard
 
 This repo is for module six's challenge assignment.
 
@@ -32,12 +32,12 @@ THEN I am again presented with current and future conditions for that city
 
 ## Accessing the Repo or Webpage:
 
-- GitHub Repo URL: https://github.com/kevindimayuga/module-six-challenge
-- GitHub Pages WebPage Deployment URL: https://kevindimayuga.github.io/module-six-challenge/
+- GitHub Repo URL: https://github.com/kevindimayuga/weather-dashboard-kd
+- GitHub Pages WebPage Deployment URL: https://kevindimayuga.github.io/weather-dashboard-kd/
 
 ## Webpage Screenshot
 
-![module six challenge webpage screenshot](./assets/images/kevindimayuga.github.io_module-six-challenge.png)
+![weather dashboard webpage screenshot](./assets/images/kevindimayuga.github.io_weather-dashboard-kd.png)
 
 ## Table of Contents
 
