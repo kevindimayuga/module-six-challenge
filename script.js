@@ -110,3 +110,89 @@ var getFiveDayForecast = (event) => {
         $('#five-day-forecast').html(fiveDayForecastHTML);
     })
 }
+
+// Function to save the city to localStorage
+var saveCity = (newCity) => {
+    let cityExists = false;
+    // Check if City exists in local storage
+    for (let i = 0; i < localStorage.length; i++) {
+        if (localStorage["cities" + i] === newCity) {
+            cityExists = true;
+            break;
+        }
+    }
+    // Save to localStorage if city is new
+    if (cityExists === false) {
+        localStorage.setItem('cities' + localStorage.length, newCity);
+    }
+}
+
+// Render the list of searched cities
+var renderCities = () => {
+    $('#city-results').empty();
+    // If localStorage is empty
+    if (localStorage.length===0){
+        if (lastCity){
+            $('#search-city').attr("value", lastCity);
+        } else {
+            $('#search-city').attr("value", "Austin");
+        }
+    } else {
+        // Build key of last city written to localStorage
+        let lastCityKey="cities"+(localStorage.length-1);
+        lastCity=localStorage.getItem(lastCityKey);
+        // Set search input to last city searched
+        $('#search-city').attr("value", lastCity);
+        // Append stored cities to page
+        for (let i = 0; i < localStorage.length; i++) {
+            let city = localStorage.getItem("cities" + i);
+            let cityEl;
+            // Set to lastCity if currentCity not set
+            if (currentCity===""){
+                currentCity=lastCity;
+            }
+            // Set button class to active for currentCity
+            if (city === currentCity) {
+                cityEl = `<button type="button" class="list-group-item list-group-item-action active">${city}</button></li>`;
+            } else {
+                cityEl = `<button type="button" class="list-group-item list-group-item-action">${city}</button></li>`;
+            } 
+            // Append city to page
+            $('#city-results').prepend(cityEl);
+        }
+        // Add a "clear" button to page if there is a cities list
+        if (localStorage.length>0){
+            $('#clear-storage').html($('<a id="clear-storage" href="#">clear</a>'));
+        } else {
+            $('#clear-storage').html('');
+        }
+    }
+    
+}
+
+// New city search button event listener
+$('#search-button').on("click", (event) => {
+event.preventDefault();
+currentCity = $('#search-city').val();
+currentConditions(event);
+});
+
+// Old searched cities buttons event listener
+$('#city-results').on("click", (event) => {
+    event.preventDefault();
+    $('#search-city').val(event.target.textContent);
+    currentCity=$('#search-city').val();
+    currentConditions(event);
+});
+
+// Clear old searched cities from localStorage event listener
+$("#clear-storage").on("click", (event) => {
+    localStorage.clear();
+    renderCities();
+});
+
+// Render the searched cities
+renderCities();
+
+// Get the current conditions (which also calls the five day forecast)
+currentConditions();
