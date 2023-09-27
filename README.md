@@ -100,8 +100,12 @@ I used the following resources to help guide me to complete the portfolio projec
 - [JavaScript Tutorial](https://www.w3schools.com/js/)
 - [Web APIs - Introduction](https://www.w3schools.com/js/js_api_intro.asp)
 - [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
+- [Bootstrap](https://getbootstrap.com/)
 - [momentjs](https://momentjs.com/)
 - [How to take a full page screenshot with a hidden Chrome shortcut](https://zapier.com/blog/full-page-screenshots-in-chrome/)
+- [Weather App Color Palette](https://www.color-hex.com/color-palette/36123)
+- [Sky & Weather Emoji](https://symbl.cc/en/emoji/travel-and-places/sky-and-weather/)
+- [Citscape Emoji](https://emojipedia.org/cityscape)
 
 ## License
 
