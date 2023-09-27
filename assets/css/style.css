@@ -1,4 +1,4 @@
-/* CSS Styles */
+/* CSS Stylesheet */
 
 /* Header */
 #header {
@@ -11,3 +11,18 @@
    color: #226ba3
 }
 
+/* Search Bar */
+#search-city {
+    width: 100%;
+    margin: 5px;
+}
+
+/* Search Button */
+#search-button {
+    width: 100%;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: #226ba3;
+}
