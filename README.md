@@ -17,7 +17,7 @@ The motivation behind this project was to learn how to utilize all the previous 
 
 ## Webpage Screenshot
 
-![weather dashboard webpage screenshot](./assets/images/kevindimayuga.github.io_weather-dashboard-kd.png)
+![weather dashboard webpage screenshot](./assets/images/weather-dashboard-kd.png)
 
 ## Table of Contents
 
