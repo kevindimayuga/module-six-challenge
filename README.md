@@ -1,5 +1,7 @@
 # Weather Dashboard
 
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 M6 - This repo is a Weather Dashboard application that provides weather conditions and a 5-day forecast for any city that is searched.
 
 ## Description
@@ -7,28 +9,6 @@ M6 - This repo is a Weather Dashboard application that provides weather conditio
 The challenge is an Job-seeking coding assessment or take-home assignment (no starter code is provided, we will build this web application by scratch). The goal is to create an application of a weather dashboard and it will run in the browser. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code and the use of Web APIs. It will have a clean, polished, and responsive user interface. It will use a 5 Day Weather Forecast API to retrieve data for cities. LocalStorage will be used to store any persistent data.
 
 The motivation behind this project was to learn how to utilize all the previous skills we have learned as well as the utilization of Web APIs we've been learning. I built this project in order to hone my own skills in HTML, CSS, Git, JavaScript and Web APIs. The problem it solved is to create a weather dashboard to work on the coding skills I've learned in the bootcamp thus far.
-
-## User Story
-
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
-
-## Acceptance Criteria
-
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-```
 
 ## Accessing the Repo or Webpage:
 
@@ -45,6 +25,11 @@ THEN I am again presented with current and future conditions for that city
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Badges](#badges)
+- [Features](#features)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [Contacts](#contacts)
 
 ## Installation
 
@@ -106,14 +91,19 @@ I used the following resources to help guide me to complete the portfolio projec
 - [Weather App Color Palette](https://www.color-hex.com/color-palette/36123)
 - [Sky & Weather Emoji](https://symbl.cc/en/emoji/travel-and-places/sky-and-weather/)
 - [Citscape Emoji](https://emojipedia.org/cityscape)
+- [Shields.io](https://shields.io/)
 
 ## License
 
-N/A
+- [MIT](https://opensource.org/license/mit/)
 
 ## Badges
 
-N/A
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ## Features
 
@@ -126,3 +116,8 @@ N/A
 ## Tests
 
 N/A
+
+## Contacts
+
+- GitHub: [kevindimayuga](https://github.com/kevindimayuga)
+- Email: k.dimayuga22@gmail.com
