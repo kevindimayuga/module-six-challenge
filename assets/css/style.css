@@ -30,6 +30,24 @@
 /*Current Weather Section */
 #current-weather {
     padding-left: 15px;
+    background-color: #226ba3;
+}
+
+/* Recent Search Label */
+label {
+    font-size: 1.0em;
+    margin: 5px;
+}
+
+/* City Search History */
+#city-results {
+    color: white;
+    background-color: gray;
+    width: 100%;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
 }
 
 /* Clears Search History Storage */

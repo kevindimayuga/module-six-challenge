@@ -1,14 +1,8 @@
 // Create variables to store the elements that will be updated with the weather data
 const currentWeather = document.querySelector('#current-weather');
-const forecastWeather = document.querySelectorAll("#forecast-weather")
+const forecastWeather = document.querySelectorAll(".forecast-weather")
 const searchBtn = document.querySelector('#search-button');
-
-// Add event listener to the search button
-searchBtn.addEventListener('click', function () {
-    var searchedCity = document.getElementById('search-city').value;
-    getCurrentCityWeatherData(searchedCity);
-    getFiveDayForecast(searchedCity);
-});
+const cityResults = document.querySelector('#city-results');
 
 // variable for the Open Weather Map API key
 var apiKey = "560ac218f2ce0c713a569004aecf6d4d";
@@ -17,13 +11,9 @@ var currentCity = "";
 // variable to store the last city that was searched
 var lastCity = "";
 
-// this function will save the city that was searched to local storage
-function saveCity() {
-
-};
-
 // this function will retrieve and display the current conditions for the city searched
 function getCurrentCityWeatherData(searchedCity) {
+    currentWeather.innerHTML = "";
     var currentWeatherAPI = "https://api.openweathermap.org/data/2.5/weather?q=" + searchedCity + "&appid=" + apiKey + "&units=imperial";
     fetch(currentWeatherAPI)
         .then(function (res) {
@@ -55,7 +45,8 @@ function getFiveDayForecast(searchedCity) {
     fetch(currentWeatherAPI)
         .then(function (res) {
             return res.json()
-        }).then(function (data) {
+        })
+        .then(function (data) {
             console.log(data)
             for (let i = 0; i < forecastWeather.length; i++) {
                 const index = i * 8 + 4;
@@ -81,7 +72,29 @@ function getFiveDayForecast(searchedCity) {
         })
 };
 
+// this function will save the city that was searched to local storage
+function saveCity(searchedCity) {
+    currentCity = searchedCity;
+    if (currentCity !== "") {
+        localStorage.setItem("lastCity", currentCity);
+    }
+};
+
 // this function will render the city search history
 function renderCitySearchHistory() {
-
+    const lastCity = localStorage.getItem("lastCity");
+    if (lastCity) {
+        const lastCityElement = document.createElement('li');
+        lastCityElement.textContent = lastCity;
+        cityResults.appendChild(lastCityElement);
+    };
 };
+
+// Add event listener to the search button
+searchBtn.addEventListener('click', function () {
+    var searchedCity = document.getElementById('search-city').value;
+    getCurrentCityWeatherData(searchedCity);
+    getFiveDayForecast(searchedCity);
+    saveCity(searchedCity);
+    renderCitySearchHistory();
+});
