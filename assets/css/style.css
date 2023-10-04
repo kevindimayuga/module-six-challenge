@@ -48,7 +48,7 @@
     text-align: center;
 }
 
-/* UV coloring scheme for UV display */
+/* UV coloring scheme for UV display
 .uv-favorable{
     background-color: green;
     border-radius: 5px;
@@ -65,7 +65,7 @@
     background-color: red;
     border-radius: 5px;
     color: white;
-}
+} */
 
 /* Media queries */
 @media only screen and (max-width: 992px) {
