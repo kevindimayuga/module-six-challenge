@@ -6,34 +6,33 @@
     background-color:#226ba3
 }
 
-/* App Description */
+/* App Description Section */
 #app-description {
    color: #226ba3
 }
 
 /* Search Bar */
-#search-city {
+#search-city, #search-button, .forecast-weather {
     width: 100%;
     margin: 5px;
 }
 
 /* Search Button */
 #search-button {
-    width: 100%;
     display: inline-block;
-    margin: 5px;
     padding: 5px;
     color: white;
     background-color: #226ba3;
 }
 
-/*Current Weather Section */
-#current-weather {
-    padding-left: 15px;
+/* Current Weather Card and Five Day Forecast Cards */
+#current-weather,
+.forecast-weather {
+    padding: 15px;
     background-color: #226ba3;
 }
 
-/* Recent Search Label */
+/* Recent City Search Label */
 label {
     font-size: 1.0em;
     margin: 5px;
@@ -58,45 +57,28 @@ label {
     margin: .5em 0em 0em .5em;
 }
 
-/* Weather Card */
-.weather-card {
-    width: 9rem;
-    background-color: #0275d8;
-    color: white;
-    text-align: center;
-}
-
-/* UV coloring scheme for UV display
-.uv-favorable{
-    background-color: green;
-    border-radius: 5px;
-    color: white;
-}
-
-.uv-moderate{
-    background-color: orange;
-    border-radius: 5px;
-    color: white;
-}
-
-.uv-severe{
-    background-color: red;
-    border-radius: 5px;
-    color: white;
-} */
-
 /* Media queries */
 @media only screen and (max-width: 992px) {
-    #search-city{
+    #search-city {
         width:100%;
     }
-    #search-button{
+    #search-button {
+        width:100%;
+    }
+    .forecast-weather {
+        display: block;
         width:100%;
     }
 }
 @media only screen and (max-width: 575px) {
-
-    #fiveDayForecastUl{
-        justify-content: center;
+    #search-city {
+        width:100%;
+    }
+    #search-button {
+        width:100%;
+    }
+    .forecast-weather {
+        display: block;
+        width: 50%;
     }
 }

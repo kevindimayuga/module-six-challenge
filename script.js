@@ -20,7 +20,9 @@ function getCurrentCityWeatherData(searchedCity) {
             return res.json()
         }).then(function (data) {
             console.log(data)
+            currentWeather.backgroundColor = "#226ba3";
             const currentHeader = document.createElement('h2');
+            currentHeader.style.color = "white";
             currentHeader.textContent = data.name + " - " + moment().format("MM/DD/YYYY");;
             currentWeather.append(currentHeader);
             const currentIcon = document.createElement('img');
@@ -28,12 +30,15 @@ function getCurrentCityWeatherData(searchedCity) {
             currentIcon.setAttribute('alt', data.weather[0].description);
             currentWeather.append(currentIcon);
             const currentTemp = document.createElement("p");
+            currentTemp.style.color = "white";
             currentTemp.textContent = "Temp: " + Math.round(data.main.temp) + "°F"
             currentWeather.append(currentTemp)
             const currentWind = document.createElement("p");
+            currentWind.style.color = "white";
             currentWind.textContent = "Wind: " + Math.round(data.wind.speed) + " MPH"
             currentWeather.append(currentWind)
             const currentHum = document.createElement("p");
+            currentHum.style.color = "white";
             currentHum.textContent = "Humidity: " + Math.round(data.main.humidity) + "%"
             currentWeather.append(currentHum)
         })
@@ -53,6 +58,7 @@ function getFiveDayForecast(searchedCity) {
                 const forecastDate = data.list[index].dt
                 forecastWeather[i].innerHTML = "";
                 const forecastHeader = document.createElement('h3');
+                forecastHeader.style.color = "white";
                 forecastHeader.textContent = moment.unix(forecastDate).format("MM/DD/YYYY");
                 forecastWeather[i].append(forecastHeader);
                 const forecastIcon = document.createElement('img');
@@ -60,15 +66,19 @@ function getFiveDayForecast(searchedCity) {
                 forecastIcon.setAttribute('alt', data.list[index].weather[0].description);
                 forecastWeather[i].append(forecastIcon);
                 const forecastTemp = document.createElement("p");
+                forecastTemp.style.color = "white";
                 forecastTemp.textContent = "Temp: " + Math.round(data.list[index].main.temp) + "°F"
                 forecastWeather[i].append(forecastTemp)
                 const forecastWind = document.createElement("p");
+                forecastWind.style.color = "white";
                 forecastWind.textContent = "Wind: " + Math.round(data.list[index].wind.speed) + " MPH"
                 forecastWeather[i].append(forecastWind)
                 const forecastHum = document.createElement("p");
+                forecastHum.style.color = "white";
                 forecastHum.textContent = "Humidity: " + Math.round(data.list[index].main.humidity) + "%"
                 forecastWeather[i].append(forecastHum)
             }
+            forecastWeather.backgroundColor = "#226ba3";
         })
 };
 
@@ -84,9 +94,14 @@ function saveCity(searchedCity) {
 function renderCitySearchHistory() {
     const lastCity = localStorage.getItem("lastCity");
     if (lastCity) {
-        const lastCityElement = document.createElement('li');
-        lastCityElement.textContent = lastCity;
-        cityResults.appendChild(lastCityElement);
+        const lastCityBtn = document.createElement('button');
+        lastCityBtn.textContent = lastCity;
+        lastCityBtn.classList.add('searched-city-button');
+        lastCityBtn.addEventListener('click', function () {
+            getCurrentCityWeatherData(lastCity);
+            getFiveDayForecast(lastCity);
+        });
+        cityResults.appendChild(lastCityBtn);
     };
 };
 
@@ -98,3 +113,5 @@ searchBtn.addEventListener('click', function () {
     saveCity(searchedCity);
     renderCitySearchHistory();
 });
+
+// Event listener for the city search history
