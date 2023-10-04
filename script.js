@@ -101,7 +101,9 @@ function renderCitySearchHistory() {
             getCurrentCityWeatherData(lastCity);
             getFiveDayForecast(lastCity);
         });
-        cityResults.appendChild(lastCityBtn);
+        const listButtons = document.createElement('li');
+        listButtons.appendChild(lastCityBtn);
+        cityResults.appendChild(listButtons);
     };
 };
 

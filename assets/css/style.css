@@ -12,13 +12,15 @@
 }
 
 /* Search Bar */
-#search-city, #search-button, .forecast-weather {
+#search-city {
     width: 100%;
     margin: 5px;
 }
 
 /* Search Button */
 #search-button {
+    width: 100%;
+    margin: 5px;
     display: inline-block;
     padding: 5px;
     color: white;
@@ -28,6 +30,8 @@
 /* Current Weather Card and Five Day Forecast Cards */
 #current-weather,
 .forecast-weather {
+    width: 100%;
+    margin: 5px;
     padding: 15px;
     background-color: #226ba3;
 }
@@ -41,12 +45,20 @@ label {
 /* City Search History */
 #city-results {
     color: white;
-    background-color: gray;
     width: 100%;
     display: inline-block;
-    margin: 5px;
+    margin: 0;
     padding: 5px;
-    text-align: center;
+}
+
+/* City Search History Buttons */
+.searched-city-button {
+    width: 100%;
+    margin: 5px;
+    display: block;
+    padding: 5px;
+    color: white;
+    background-color: gray;
 }
 
 /* Clears Search History Storage */
