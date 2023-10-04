@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-This repo is for module six's challenge assignment.
+M6 - This repo is a Weather Dashboard application that provides weather conditions and a 5-day forecast for any city that is searched.
 
 ## Description
 
